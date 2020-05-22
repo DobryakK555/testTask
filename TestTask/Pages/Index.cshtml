@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <div align="center">
+        <h1>One word for one world!</h1>
+        <p>
+            What are you thinking about right now? <br />
+            What is bothering you today? <br />
+            What is inspiring you today? <br />
+            It does not matter, write any word that come to your mind!
+        </p>
+
+        <h2>Your word!</h2>
+        <input type="text" name="word" size="40" placeholder="Enter your word!" pattern="^[A-Za-z]+" />
+        <br />
+        <br />
+        <h2>Your email address</h2>
+        <input type="email" name="emailAddress" size="40" placeholder="test@gmail.com" />
+        <br />
+        <br />
+        <input type="submit" value="Tell the whole world!" class="btn btn-outline-primary" />
+    </div>
+    
+</form>

@@ -1,0 +1,28 @@
+﻿@page
+@model TestTask.ResultModel
+@{
+    ViewData["Title"] = "Result";
+}
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+    </head>
+    <body>
+        <div align="center">
+            <p>Word of the day:</p>
+            <h4>@Model.wordOfTheDay.Key</h4>
+            <p>Count of people: @Model.wordOfTheDay.Value</p>
+            <p>Your word: @Model.wordOfTheUser</p>
+            <p>Count of people: @Model.userWordCount</p>
+            <br />
+            <p>Statistics:</p>
+            @{ 
+                foreach (var x in Model.Statisics)
+                {
+                    <p>@x.Key : @x.Value</p>
+                }
+            }
+        </div>
+    </body>
+</html>
